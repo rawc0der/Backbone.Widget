@@ -2,9 +2,10 @@ define([
  'underscore', 
  'backbone',
  'views/MyView',
- 'widget'
+ 'widget',
+ 'modules/templates/simple'
 
-], function(_, Backbone, MyView, Widget){
+], function(_, Backbone, MyView, Widget, simple){
 	/**
 	 * Controller Object responsible for View construction and application event flow
 	 * @type {[Object]}
@@ -20,7 +21,8 @@ define([
 		start: function(){
 
 			console.log('Controller::Start  --> define logic');		
-			console.log(new Widget())
+
+
 
 		} // end start
 

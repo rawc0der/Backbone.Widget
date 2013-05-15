@@ -1,0 +1,20 @@
+{namespace templates.simple}
+/**
+ * Says hello to the world.
+ */
+{template .helloWorld}
+  Hello world!
+{/template}
+
+/**
+ * Greets a person using "Hello" by default.
+ * @param name The name of the person.
+ * @param? greetingWord Optional greeting word to use instead of "Hello".
+ */
+{template .helloName}
+	{if not $greetingWord}
+		<div>Hello {$name}! </div>
+	{else}
+		<div>{$greetingWord} {$name}! </div>
+	{/if}
+{/template}

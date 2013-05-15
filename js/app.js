@@ -21,7 +21,7 @@ define([
      */
       initialize: function(){
 
-        console.log('App::initialize', this);
+        console.log('Development App::initialize', this);
 
         this.Controller.start();
 

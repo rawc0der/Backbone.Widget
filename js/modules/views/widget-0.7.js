@@ -89,8 +89,16 @@ define(['underscore', 'backbone'], function(_, Backbone){
         
         initTemplate: function(){
             var _template = {};
-            _.extend(_template, this.options.template || this.template);
+            _.extend(_template, this.template );
+            _.extend(_template, this.options.template)
             this._template = _.extend( _template, _.omit(this._templateDefaults, _.keys(_template)));
+            if(this._config.templateEngine === 'gc') {
+                this._template.templateEngine = {
+                    template: function(partial, dataObj){
+                        return partial(dataObj)
+                    }
+                };
+            }
             if( _.isEmpty(this._template.templateDataObject) )  {
                 if(this.model)  this._template.templateDataObject = this.model.attributes;   
             }

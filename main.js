@@ -7,23 +7,25 @@ require.config({
 		jquery: 'library/min/jquery',
 	    underscore: 'library/min/underscore',
 	    backbone: 'library/min/backbone',
-	    templates: 'templates',
+	    templates: 'modules/templates',
 	    controllers: 'modules/controllers',
 	    models: 'modules/models',
 	    views: 'modules/views',
 	    modules: 'modules',
 	    widget: 'modules/views/widget-0.7',
-	    transit: 'library/min/jquery.transit.min'
+	    transit: 'library/min/jquery.transit.min',
+	    soyutils: 'library/googleClosure/soyutils'
 	}
 });
 /**
  * Load main App module
  */
 require([
-	'app'
+	'app',
+	'soyutils'
 	
 
-], function(App, tansit){ 
+], function(App, soy){ 
 	/**
 	 *  Initialize application when DOM finishes loading
 	 */
