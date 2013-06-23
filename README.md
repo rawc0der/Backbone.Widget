@@ -3,14 +3,14 @@ Backbone.Widget
 
 Widget class replacing Backbone.View
 
-Features:
+> Features:
 - Template engine:  Underscore, Google Closure Templates, Handlebars
 - Subview Management
 - Model Bindings
 
 
 Sample construtor:
-
+```
 var DemoWidget = Widget.extend({
      config: {
          debug:true,
@@ -29,4 +29,5 @@ var DemoWidget = Widget.extend({
     initialize: function(){}
 })
 
-TODO:: write demo app & annotated source
+```
+[TODO:: write demo app & annotated source]
